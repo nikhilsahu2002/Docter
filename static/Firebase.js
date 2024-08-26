@@ -1,3 +1,4 @@
+
 // Import the necessary functions from the Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
 import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js";
@@ -17,7 +18,7 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 // Handle form submission
-document.querySelector('form').addEventListener('submit', function (event) {
+document.getElementById('appointment-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
     // Get form values
@@ -47,3 +48,4 @@ document.querySelector('form').addEventListener('submit', function (event) {
         console.error('Error booking appointment:', error);
     });
 });
+
