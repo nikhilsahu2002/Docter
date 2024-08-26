@@ -4,7 +4,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from flask import Flask, jsonify, render_template, request
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates')
 
 # SMTP Configuration
 SMTP_SERVER = 'smtp.gmail.com'
