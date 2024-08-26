@@ -72,14 +72,14 @@ def appointment():
             # Send confirmation email
             if send_email(email, subject, body):
                 logger.info(f"Appointment booked successfully for {name} ({email})")
-                return jsonify({'message': 'Appointment booked successfully!'})
+                # return jsonify({'message': 'Appointment booked successfully!'})
             else:
                 logger.error(f"Error booking appointment for {name} ({email})")
-                return jsonify({'message': 'Error booking appointment.'}), 500
+                # return jsonify({'message': 'Error booking appointment.'}), 500
 
         except Exception as e:
             logger.error(f"Exception occurred: {e}")
-            return jsonify({'message': 'An error occurred during the booking process.'}), 500
+            # return jsonify({'message': 'An error occurred during the booking process.'}), 500
 
     # If the request method is GET, render the appointment page
     return render_template('appointment.html')
