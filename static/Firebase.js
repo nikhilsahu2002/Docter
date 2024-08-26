@@ -22,13 +22,13 @@ document.getElementById('appointment-form').addEventListener('submit', function 
     event.preventDefault(); // Prevent default form submission
 
     // Get form values
-    const name = document.querySelector('input[placeholder="Your Name"]').value;
-    const email = document.querySelector('input[placeholder="Your Email"]').value;
-    const mobile = document.querySelector('input[placeholder="Your Mobile"]').value;
-    const doctor = document.querySelector('select').value;
-    const date = document.querySelector('#date input').value;
-    const time = document.querySelector('#time input').value;
-    const problem = document.querySelector('textarea[placeholder="Describe your problem"]').value;
+    const name = document.querySelector('input[name="name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const doctor = document.querySelector('select[name="doctor"]').value;
+    const date = document.querySelector('input[name="date"]').value;
+    const time = document.querySelector('input[name="time"]').value;
+    const problem = document.querySelector('textarea[name="problem"]').value;
 
     // Create a unique ID for each appointment entry
     const appointmentId = Date.now().toString();
@@ -48,4 +48,3 @@ document.getElementById('appointment-form').addEventListener('submit', function 
         console.error('Error booking appointment:', error);
     });
 });
-
